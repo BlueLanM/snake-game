@@ -1,9 +1,6 @@
-飞机大战
+经典贪吃蛇
 =====================
-消灭敌人
 
-🎮 方向键控制移动，空格键射击
+🎮 方向键控制移动
 
-👾 消灭所有敌人赢得更高分数吧
-
-点击试玩：[飞机大战](https://bluelanm.github.io/plane-wars/)
+点击试玩：[贪吃蛇](https://bluelanm.github.io/snake-game/)

@@ -1,0 +1,7 @@
+function preload() {
+
+}
+
+export {
+	preload
+};
