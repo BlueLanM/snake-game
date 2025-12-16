@@ -1,14 +1,60 @@
 <!doctype html> 
-<html lang="en"> 
+<html lang="zh-CN"> 
 <head> 
     <meta charset="UTF-8" />
-    <title>LanM Snake</title>
-	<link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐍 魔改贪吃蛇 | LanM Snake</title>
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/phaser.min.js"></script>
     <script type="module" src="js/game.js"></script>
 </head>
 <body>
-    <h2 class="title">贪吃蛇</h2>
-    <div class="subtitle">上下左右移动</div>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🐍 魔改贪吃蛇</h1>
+            <p class="description">可以射击的贪吃蛇游戏</p>
+        </header>
+        
+        <div class="controls-panel">
+            <h3 class="controls-title">🎮 操作指南</h3>
+            <div class="controls-grid">
+                <div class="control-item">
+                    <span class="control-icon">🕹️</span>
+                    <div class="control-info">
+                        <strong>移动</strong>
+                        <span class="keys"><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> 或 <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span>
+                    </div>
+                </div>
+                
+                <div class="control-item">
+                    <span class="control-icon">⚡</span>
+                    <div class="control-info">
+                        <strong>加速</strong>
+                        <span class="keys">按住当前方向键</span>
+                    </div>
+                </div>
+                
+                <div class="control-item">
+                    <span class="control-icon">🔫</span>
+                    <div class="control-info">
+                        <strong>射击</strong>
+                        <span class="keys"><kbd>J</kbd> 或 <kbd>X</kbd></span>
+                    </div>
+                </div>
+                
+                <div class="control-item">
+                    <span class="control-icon">🔄</span>
+                    <div class="control-info">
+                        <strong>重启</strong>
+                        <span class="keys"><kbd>空格</kbd></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p class="copyright">Made with by LanM | Powered by Phaser 3</p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,7 +1,0 @@
-function preload() {
-
-}
-
-export {
-	preload
-};

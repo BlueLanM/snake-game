@@ -1,12 +1,167 @@
+/* 全局样式 */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 20px;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #fff;
 }
-.title{
-	margin-top: 20px ;
+/* 容器 */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 800px;
+	gap: 20px;
 }
-.subtitle{
-	margin-bottom: 20px ;
+/* 头部 */
+.header {
+	margin-bottom: 10px;
+	text-align: center;
+}
+.title {
+	margin-bottom: 10px;
+	text-shadow: 0 0 20px rgba(0, 255, 136, 0.5),
+		0 0 40px rgba(0, 255, 136, 0.3);
+	font-weight: bold;
+	font-size: 2.5rem;
+	color: #0f8;
+	animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+	from {
+		text-shadow: 0 0 20px rgba(0, 255, 136, 0.5),
+			0 0 40px rgba(0, 255, 136, 0.3);
+	}
+	to {
+		text-shadow: 0 0 30px rgba(0, 255, 136, 0.8),
+			0 0 60px rgba(0, 255, 136, 0.5);
+	}
+}
+.description {
+	opacity: 0.9;
+	font-size: 1rem;
+	color: #8df;
+}
+/* 操作面板 */
+.controls-panel {
+	margin-bottom: 20px;
+	padding: 25px;
+	border: 1px solid rgba(136, 221, 255, 0.2);
+	border-radius: 15px;
+	width: 100%;
+	max-width: 650px;
+	background: rgba(26, 31, 58, 0.8);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+.controls-title {
+	margin-bottom: 20px;
+	text-align: center;
+	text-shadow: 0 2px 10px rgba(136, 221, 255, 0.3);
+	font-size: 1.5rem;
+	color: #8df;
+}
+.controls-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 15px;
+}
+.control-item {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	border: 1px solid rgba(136, 221, 255, 0.15);
+	border-radius: 10px;
+	background: rgba(10, 14, 39, 0.6);
+	transition: all 0.3s ease;
+	gap: 15px;
+}
+.control-item:hover {
+	border-color: rgba(0, 255, 136, 0.4);
+	background: rgba(10, 14, 39, 0.8);
+	box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
+	transform: translateY(-2px);
+}
+.control-icon {
+	filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
+	font-size: 2rem;
+}
+.control-info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	flex: 1;
+}
+.control-info strong {
+	font-size: 1.1rem;
+	color: #0f8;
+}
+.keys {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 0.9rem;
+	color: #adf;
+	gap: 5px;
+}
+kbd {
+	display: inline-block;
+	padding: 3px 8px;
+	border: 1px solid rgba(136, 221, 255, 0.3);
+	border-radius: 5px;
+	background: linear-gradient(145deg, #2a2f4a, #1a1f3a);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	font-family: 'Courier New', monospace;
+	font-size: 0.85rem;
+	color: #fff;
+}
+/* 页脚 */
+.footer {
+	position: fixed;
+	bottom: 0;
+	margin-top: 20px;
+	padding: 20px;
+	border: 1px solid rgba(136, 221, 255, 0.15);
+	border-radius: 10px;
+	width: 100%;
+	max-width: 650px;
+	background: rgba(26, 31, 58, 0.5);
+	text-align: center;
+}
+.footer p {
+	margin: 8px 0;
+	font-size: 0.95rem;
+	color: #adf;
+}
+.footer strong {
+	color: #fa0;
+}
+.copyright {
+	margin-top: 10px !important;
+	opacity: 0.7;
+	font-size: 0.85rem;
+}
+/* 响应式设计 */
+@media (max-width: 768px) {
+	.title {
+		font-size: 2rem;
+	}
+	.controls-grid {
+		grid-template-columns: 1fr;
+	}
+	.game-wrapper {
+		padding: 5px;
+	}
 }
