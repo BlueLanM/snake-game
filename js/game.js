@@ -72,7 +72,7 @@ function create() {
 	snakeGraphics = this.add.graphics();
 
 	// 3. 绘制网格线(可选,方便调试)
-	drawGrid(this);
+	// drawGrid(this);
 
 	// 4. 渲染蛇
 	drawSnake();
